@@ -21,6 +21,7 @@ final as (
     select 
         orders.order_id,
         orders.customer_id,
+        orders.order_date,
         successes.successful_payments as amount
     from orders 
     left join successes using (order_id)
